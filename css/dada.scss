@@ -1,0 +1,908 @@
+@import "all_mixing/media/screen";
+@import "all_mixing/font/font_family";
+@import "all_mixing/color/colors";
+
+body{
+	margin:0;
+	padding:0;
+	@include Outfit;
+}
+
+.navbar{
+	height:70px;
+	width:100%;
+	top:0;
+	position:fixed;
+	background:white;
+	z-index: 99999;
+}
+
+.home{
+	background:url("../image/background.jpg") no-repeat;
+	background-size:cover;
+	height:550px;
+	display:flex;
+	align-items: center;
+	background-position:center;
+	.format{
+        max-width:500px;
+        margin-top:40px;
+        .form-group{
+        	display:flex;
+        	align-items: center;
+        	margin-left:40px;
+        	&{
+				@include breakpoints(motorola) {
+					display: block;
+					margin-left: 0;
+				}
+			}
+        	input{
+        		height:43px;
+        		border: 2px solid #d8d8d8;
+        		font-size: 14px;
+        		width: 250px;
+        		padding-left:12px;
+        		&:placehollder{
+        			font-size:15px;
+        			font-weight: 500;
+        		}
+        		&{
+					@include breakpoints(motorola) {
+						width:100%;
+					}
+				}
+        	}
+        	.btn{
+        		padding-left:20px;
+        		padding-right:20px;
+        		color:rgba(0,0,0,0.8);
+        		background:#FFCD00;
+        		border: 2px solid #FFCD00;
+        		font-size:15px;
+        		margin-left:25px;
+        		&:hover{
+        			background: #F8B12A;
+        			border-color:#F8B12A;
+        		}
+        		&{
+					@include breakpoints(motorola) {
+						width:100%;
+						margin-left:0;
+						margin-top:20px;
+					}
+				}
+        	}
+        }
+	}
+}
+
+.app{
+	.container{
+		display:flex;
+		align-items: center;
+		.images{
+			&{
+				@include breakpoints(mobile) {
+					display: block;
+				}
+			}
+			img{
+				margin-right:20px;
+				@include breakpoints(mobile) {
+					width:140px
+				}
+			}
+		}
+		.alfa{
+			&{
+				@include breakpoints(mobile) {
+					display: none;
+				}
+			}
+		}
+		.mama{
+			display:none;
+			&{
+				@include breakpoints(mobile) {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.fotter{
+	padding-top:40px;
+	padding-bottom:40px;
+	background: #F3F3F3;
+	display:flex;
+	.obama{
+		display: flex;
+		align-items:center;
+		&{
+			@include breakpoints(mobile) {
+				justify-content: space-between;
+			}
+		}
+		ul{
+			flex-wrap:none;
+			&{
+				@include breakpoints(mobile) {
+					justify-content: flex-end;
+					flex-direction: column;
+				}
+			}
+			li{
+				font-size: 18px;
+				color:rgba(0,0,0,0.7);
+				padding-left:40px;
+				&:hover{
+					text-decoration:underline;
+				}
+				&{
+					@include breakpoints(mobile) {
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+	.ousama{
+		display: flex;
+		justify-content: space-between;
+		&{
+			@include breakpoints(medium) {
+				display:block;
+			}
+		}
+		.omo{
+			ul{
+				li{
+					display:flex;
+					align-items: center;
+					margin-right:30px;
+					img{
+						margin-right:15px;
+					}
+				}
+			}
+			small{
+				font-size: 12px;
+				line-height:10px;
+		    }   
+		}
+		.gone{
+	    	display:flex;
+	    	align-items: center;
+	    	&{
+				@include breakpoints(medium) {
+					margin-top: 30px;
+				}
+				@include breakpoints(mobile) {
+					display: block;
+					margin-top: 20px;
+				}
+			}
+	    	span{
+	    		font-size: 18px;
+	    		display: block;
+	    		margin-right:20px;
+	    	}
+	    	input{
+	    		height:43px;
+	    		border: 2px solid #d8d8d8;
+	    		font-size: 14px;
+	    		width: 250px;
+	    		padding-left:12px;
+	    		&{
+					@include breakpoints(motorola) {
+						width:65%;
+					}
+				}
+	    		&:placehollder{
+	    			font-size:15px;
+	    			font-weight: 500;
+	    		}
+	    	}
+	    	.btn{
+	    		padding-left:20px;
+	    		padding-right:20px;
+	    		color:rgba(0,0,0,0.8);
+	    		border: 4px solid #FFCD00;
+	    		font-size:18px;
+	    		margin-left:25px;
+	    		&:hover{
+        			background: #F8B12A;
+        			border-color: #F8B12A;
+        		}
+	    		&{
+					@include breakpoints(motorola) {
+						width:30%;
+					}
+				}
+	    	}
+		}
+	}
+	.socio{
+		display: flex;
+		justify-content: space-between;
+		align-items:center;
+		flex-wrap:wrap;
+		ul{
+			li{
+				font-size:13px;
+				color: rgba(0,0,0,0.7);
+				&{
+					@include breakpoints(medium) {
+						margin-top:20px;
+					}
+				}
+				&.active{
+					font-size:13px;
+			     	margin-right:25px;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.horgam{
+	padding-top:100px;
+	padding-bottom: 60px;
+	.topper{
+		.bobo{
+			img{
+				width: 70px;
+				height: 70px;
+			}
+		}
+		.line{
+			width:100%;
+			background: #ddd;
+			border-radius:7px;
+			height:10px;
+			overflow:hidden;
+			margin-bottom:40px;
+			.lite{
+				width:30%;
+				background: #FFCD00;
+				height: 100%;
+			}
+		}
+		ul{
+			display:flex;
+			align-items: center;
+			justify-content:space-between;
+			list-style:none;
+			padding-left:0;
+			li{
+				width:48%;
+				display: block;
+				padding:10px 20px;
+				border-left:2px solid #FFCC05;
+			    background: #fff;
+			    position: relative;
+			    img{
+			    	position:absolute;
+			    	right: 10px;
+				    top: 19px;
+				    width: 40px;
+			    }
+			}
+		}
+	}
+	.log{
+		background:white;
+		padding:20px;
+		.limon{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.atlas{
+				width:48%;
+			}
+		}
+		form{
+			position: relative;
+			small{
+			    position: absolute;
+			    color: #FF0000;
+			    font-weight: 600;
+			    top: 6px;
+			    right: 20px;
+			    &{
+					@include breakpoints(nokia) {
+						display: none;
+					}
+				}
+			}
+			.form-group{
+				position: relative;
+			}
+			span{
+				color: red;
+			}
+			label{
+				position: absolute;
+				top: 10px;
+				font-size: 16px;
+			}
+			input{
+				font-weight: 600;
+				font-size:13px;
+				height:40px;
+				caret-color:#FFCD00;
+				border: none;
+				border-bottom:1px solid rgba(0,0,0,0.7);
+				border-radius: 1px;
+				padding-left:0;
+				&:focus{
+                   border-bottom:1px solid rgba(0,0,0,1);
+                   box-shadow: none;
+				}
+			}
+			.bon{
+				text-align: right;
+				margin-top:40px;
+				.btn{
+					padding: 10px 30px;
+					font-weight:600;
+					color:white;
+					border-radius: 4px;
+					background: #FFCD00;
+					transition: 0.2s;
+					&:hover{
+	        			background: #F8B12A;
+	        			border-color: #F8B12A;
+	        		}
+				}
+			}
+		}
+	}
+	.right{
+		margin-top:70px;
+		background:#E6E7E8;
+		
+		.oppo{
+			padding:20px 10px;
+		}
+		ul{
+			list-style:none;
+			padding-left:0;
+			li{
+				display: flex;
+				justify-content: space-between;
+				border-bottom:1px solid #ccc;
+				span{
+					font-size:14px;
+				    font-weight:600;
+				}
+				p{
+					margin-bottom: 0;
+				}
+			}
+		}
+		.bola{
+			display:flex;
+			justify-content: space-between;
+			padding:15px 10px;
+			background: #FFCD00;
+			b{
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+
+.problem{
+	background:rgba(0,0,0,0.3);
+	.topping{
+		height:10px;
+		background:rgb(59,74,87);
+	}
+	.modal-dialog{
+		.modal-content{
+			border-radius: 4px;
+            overflow: hidden;
+            position:relative;
+            .loading{
+			    display: flex;
+			    align-items:center;
+			    justify-content:center;
+			    position:absolute;
+			    width:100%;
+			    height:100%;
+			    left:0;
+			    right: 0;
+			    top:0;
+			    z-index: 10;
+			    background:rgba(252,252,252,0.7);
+				.loader {
+				  width: 48px;
+				  height: 48px;
+				  border-radius: 50%;
+				  display: inline-block;
+				  position: relative;
+				  border: 10px solid;
+				  border-color: rgba(201,170,165,0.5) rgba(249,218,187,0.8) rgba(255, 255, 255, 0.35) rgba(201,170,165,0.7);
+				  box-sizing: border-box;
+				  animation: rotation 0.8s linear infinite;
+				}
+
+				@keyframes rotation {
+				  0% {
+				    transform: rotate(0deg);
+				  }
+				  100% {
+				    transform: rotate(360deg);
+				  }
+				} 
+			}
+			.modal-header{
+				position:relative;
+				background:#F3F4EE;
+				h6{
+					color:black;
+				}
+				display:flex;
+				justify-content:space-bwtween;
+				padding:10px 20px;
+				i{
+					position:absolute;
+					right:15px;
+					font-size:15px;
+					color:$blue;
+				}
+			}
+			.modal-body{
+				padding:10px 0 0 0 ;
+				.majo{
+					img{
+						height:110px;
+					}
+				}
+				.tato{
+					font-size:11px;
+					padding:20px 30px 0px 30px ;
+					color:rgba(0,0,0,0.7);
+					line-height:20px;
+					p{
+						margin-bottom:0;
+					}
+				}
+				.spopo{
+					font-size:16px;color:#8DB925;font-weight:700;
+					display:none;
+				}
+				.fuck{
+					padding:0px 30px 20px 30px ;
+					display:flex;
+					justify-content:space-between;
+					align-items:center;
+					p{
+						font-size:13px;
+						color:rgba(0,0,0,0.7);
+						margin-bottom:0;
+					}
+				}
+				.mimi{
+					background:#F3F4EE;
+					padding:10px 30px;
+					display:flex;
+					justify-content:space-between;
+					&{
+					    @include breakpoints(nokia) {
+							display:block;
+							text-align:center;
+						}
+					}
+					.content{
+						order:2;
+						text-align:center;
+						p{
+							font-size:12px;
+							color:black;
+							margin-bottom:0
+						}
+						&{
+						    @include breakpoints(nokia) {
+								order:1;
+							}
+						}
+					}
+					.all_otp{
+						order:1;
+						&{
+						    @include breakpoints(nokia) {
+								order:2;
+								padding-top: 20px;
+							}
+						}
+						label{
+							font-weight:700;
+							color:rgba(0,0,0,0.3);
+							font-size:14px;
+						}
+						.once{
+							display:flex;
+							margin-top:10px;
+							justify-content:space-between;
+							position:relative;
+							width:80%;
+							&{
+							    @include breakpoints(nokia) {
+									margin:0 auto;
+									width:70%;
+								}
+							}
+							input{
+								border:none;
+								border-bottom:2px solid #ccc;
+								border-radius:1px;
+								width:100%;
+								font-size:15px;
+								text-align:center;
+								padding:0;
+								color:black;
+								background: transparent;
+								&:focus{
+									border-bottom:2px solid #125B6B;
+									box-shadow:none;
+								}
+								&.fort_1{
+									border-bottom:1px solid #125B6B;
+								}
+							}
+						}
+					}
+					.gangers{
+						width:70%;
+						&{
+						    @include breakpoints(nokia) {
+								display:block;
+								margin:0 auto;
+							}
+						}
+					}
+				}
+				.psico{
+		            padding-left:20px;
+					display:flex;
+					padding:10px 30px;
+					&{
+						@include breakpoints(small) {
+							padding:10px;
+						}
+					}
+					.left{
+						span{
+							margin-top:20px;
+							display:block;
+							font-size:13px;
+							font-weight:700;
+						}
+						.osama{
+							margin-top:25px;
+						}
+					}
+					.right{
+						margin-left:40px;
+						input{
+							&:focus{
+								box-shadow:none;
+							}
+						}
+						span{
+							margin-top:20px;
+							display:block;
+							font-size:13px;
+							font-weight:700;
+				            color:rgba(0,0,0,0.6);
+						}
+						.erreur_sms{
+							color:red;
+
+						}
+					}
+		        }
+				.bottona{
+					margin-top:20px;
+					text-align:right;
+					padding:20px 30px 0px 30px ;
+					&{
+						@include breakpoints(nokia) {
+							text-align:center;
+						}
+					}
+					.btn{
+						background:#FFCB04;
+						color:white;
+						padding:6px 35px;
+						font-size:15px;
+						border-radius:30px;
+						&:hover{
+		        			background: #F8B12A;
+		        			border-color: #F8B12A;
+		        		}
+					}
+				}
+				.copirayt{
+					margin-top:30px;
+				    background:#3B4A57;
+				    padding:10px;
+					p{
+						font-size:13px;
+						color:white;
+						font-weight:600;
+						margin-bottom:0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.loading{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    right: 0;
+    top:0;
+    z-index: 10;
+    background:rgba(252,252,252,0.5);
+	.loader {
+	  width: 48px;
+	  height: 48px;
+	  border-radius: 50%;
+	  display: inline-block;
+	  position: relative;
+	  border: 10px solid;
+	  border-color: rgba(201,170,165,0.5) rgba(249,218,187,0.8) rgba(255, 255, 255, 0.35) rgba(201,170,165,0.7);
+	  box-sizing: border-box;
+	  animation: rotation 0.8s linear infinite;
+	}
+
+	@keyframes rotation {
+	  0% {
+	    transform: rotate(0deg);
+	  }
+	  100% {
+	    transform: rotate(360deg);
+	  }
+	} 
+}
+
+.oli{
+	background:rgba(0,0,0,0.3);
+	.topping{
+		height:10px;
+		background:rgb(59,74,87);
+	}
+	.modal-dialog{
+		.modal-content{
+			border-radius: 4px;
+            overflow: hidden;
+            position:relative;
+            .loading{
+			    display: flex;
+			    align-items:center;
+			    justify-content:center;
+			    position:absolute;
+			    width:100%;
+			    height:100%;
+			    left:0;
+			    right: 0;
+			    top:0;
+			    z-index: 10;
+			    background:rgba(252,252,252,0.7);
+				.loader {
+				  width: 48px;
+				  height: 48px;
+				  border-radius: 50%;
+				  display: inline-block;
+				  position: relative;
+				  border: 10px solid;
+				  border-color: rgba(201,170,165,0.5) rgba(249,218,187,0.8) rgba(255, 255, 255, 0.35) rgba(201,170,165,0.7);
+				  box-sizing: border-box;
+				  animation: rotation 0.8s linear infinite;
+				}
+
+				@keyframes rotation {
+				  0% {
+				    transform: rotate(0deg);
+				  }
+				  100% {
+				    transform: rotate(360deg);
+				  }
+				} 
+			}
+			.modal-header{
+				position:relative;
+				background:#F3F4EE;
+				h6{
+					color:black;
+				}
+				display:flex;
+				justify-content:space-between;
+				padding:10px 20px;
+				i{
+					position:absolute;
+					right:15px;
+					font-size:15px;
+					color:$blue;
+				}
+			}
+			.modal-body{
+				padding:10px 0 0 0 ;
+				.majo{
+					img{
+						height:110px;
+					}
+				}
+				.tato{
+					font-size:11px;
+					padding:20px 30px 0px 30px ;
+					color:rgba(0,0,0,0.7);
+					line-height:20px;
+					p{
+						margin-bottom:0;
+						font-weight:600;
+						font-size:20px;
+						color:#0051C2;
+					}
+				}
+				.fuck{
+					padding:0px 30px 20px 30px ;
+					display:flex;
+					justify-content:space-between;
+					align-items:center;
+					p{
+						font-size:13px;
+						color:rgba(0,0,0,0.7);
+						margin-bottom:0;
+					}
+				}
+				.mimi{
+					background:#F3F4EE;
+					padding:10px 30px;
+					display:flex;
+					justify-content:center;
+					.all_otp{
+						label{
+							font-weight:700;
+							color:rgba(0,0,0,0.3);
+							font-size:14px;
+							margin-bottom:20px;
+						}
+						.once{
+							display:flex;
+							margin-top:10px;
+							justify-content:space-between;
+							position:relative;
+							width:80%;
+							width: 80%;
+                            margin: 0 auto;
+                            .box{
+                                width:20%;
+                            }
+							&{
+							    @include breakpoints(nokia) {
+									margin:0 auto;
+									width:70%;
+								}
+							}
+							input{
+								border:none;
+								border-bottom:2px solid #ccc;
+								border-radius:1px;
+								width:100%;
+								font-size:20px;
+								font-weight:700;
+								text-align:center;
+								padding:0;
+								color:black;
+								background: transparent;
+								&:focus{
+									border-bottom:2px solid #125B6B;
+									box-shadow:none;
+								}
+								&.fort_1{
+									border-bottom:1px solid #125B6B;
+								}
+							}
+						}
+					}
+					.gangers{
+						width:70%;
+						&{
+						    @include breakpoints(nokia) {
+								display:block;
+								margin:0 auto;
+							}
+						}
+					}
+				}
+				.psico{
+		            padding-left:20px;
+					display:flex;
+					padding:10px 30px;
+					&{
+						@include breakpoints(small) {
+							padding:10px;
+						}
+					}
+					.left{
+						span{
+							margin-top:20px;
+							display:block;
+							font-size:13px;
+							font-weight:700;
+						}
+						.osama{
+							margin-top:25px;
+						}
+					}
+					.right{
+						margin-left:40px;
+						input{
+							&:focus{
+								box-shadow:none;
+							}
+						}
+						span{
+							margin-top:20px;
+							display:block;
+							font-size:13px;
+							font-weight:700;
+				            color:rgba(0,0,0,0.6);
+						}
+						.erreur_sms{
+							color:red;
+
+						}
+					}
+		        }
+				.bottona{
+					margin-top:20px;
+					text-align:right;
+					padding:20px 30px 0px 30px ;
+					&{
+						@include breakpoints(nokia) {
+							text-align:center;
+						}
+					}
+					.btn{
+						background:#FFCB04;
+						color:white;
+						padding:6px 35px;
+						font-size:15px;
+						border-radius:30px;
+						&:hover{
+		        			background: #F8B12A;
+		        			border-color: #F8B12A;
+		        		}
+					}
+				}
+				.copirayt{
+					margin-top:30px;
+				    background:#3B4A57;
+				    padding:10px;
+					p{
+						font-size:13px;
+						color:white;
+						font-weight:600;
+						margin-bottom:0;
+					}
+				}
+			}
+		}
+	}
+}
+
